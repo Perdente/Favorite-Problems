@@ -1,5 +1,6 @@
 /*https://atcoder.jp/contests/abc178/tasks/abc178_c*/
 /*Inclusion Exclusion. Number of ways that we can pick any value from 0 to 9 = 10^N . Number of ways that 0 doesnt occur = number of ways to pick any value from 1 to 9 = 9^N. By same logic, number of ways that 9 doesn't occur anywhere = 9^N Number of ways that both 0 or 9 don't occur = 8^N Hence answer is 10^N — 9^N — 9^N + 8^N . Use mods wherever required*/
+//when you take [0,8] by missing 9 and [1,9] by missing 0 — you double counted and get minused the value [1,8] twice that's why add back 8^N
 #include<bits/stdc++.h>
 using namespace std;
 const long long mod = 1e9+7;
