@@ -30,3 +30,33 @@ signed main()
     }
 	return 0;
 }
+
+/*//https://codeforces.com/contest/1437/problem/B
+//https://codeforces.com/blog/entry/84091?#comment-716005
+
+#include<bits/stdc++.h>
+using namespace std;
+#define int long long int
+const int N=1e5+5;
+signed main()
+{
+    ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
+    int t;cin>>t;
+    while(t--)
+    {
+        int n;cin>>n;
+        string str;
+        cin>>str;
+        int cnt=0,cnt1=0;
+        for(int i=0;i<n;++i)
+        {
+            if(str[i]==str[(i+1)%n])
+            {
+                cnt++;
+            }
+        }
+        cout<<cnt/2<<endl;
+    }
+	return 0;
+}
+*/
