@@ -114,3 +114,29 @@ int main()
 	}
 	return 0;
 }
+/*#include<bits/stdc++.h>
+using namespace std;
+#define int long long int
+const int N=1e5+5;
+signed main()
+{
+    ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
+    int t;cin>>t;
+    while(t--)
+    {
+        string s;cin>>s;
+        int cnt[2]={0},cnt1[2]={0};
+        for(auto i:s)cnt[i-'0']++;
+        int mi=s.size();
+        for(auto i:s)
+        {
+            cnt1[i-'0']++;
+            cnt[i-'0']--;
+            mi=min(mi,cnt[0]+cnt1[1]);
+            mi=min(mi,cnt[1]+cnt1[0]);
+        }
+        cout<<mi<<endl;
+    }
+	return 0;
+}
+*/
