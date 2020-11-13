@@ -1,5 +1,6 @@
 //https://codeforces.com/contest/1288/problem/C
 //https://codeforces.com/blog/entry/73105#comment-573588
+//stairs and bars
 #include<bits/stdc++.h>
 using namespace std;
 const int mod = 1e9+7;
