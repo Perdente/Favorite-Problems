@@ -1,5 +1,6 @@
 //Binary search on answer
 //https://atcoder.jp/contests/zone2021/tasks/zone2021_c
+//https://www.youtube.com/watch?v=Y0vN9wDhin4&t=312s
 #include<bits/stdc++.h>
 using namespace std;
 #define int long long int
