@@ -1,3 +1,4 @@
+//https://www.hackerearth.com/problem/algorithm/teachers-dilemma-3-00955296/
 #include<bits/stdc++.h>
 using namespace std;
 #define int long long int
