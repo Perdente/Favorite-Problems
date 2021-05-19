@@ -31,7 +31,7 @@ void union_set(int a, int b) {
             swap(a, b);
         parent[b] = a;
         Min[a]=min(Min[a],Min[b]);
-		Max[a]=max(Max[a],Max[b]);
+	Max[a]=max(Max[a],Max[b]);
         size[a] += size[b];
     }
 }
