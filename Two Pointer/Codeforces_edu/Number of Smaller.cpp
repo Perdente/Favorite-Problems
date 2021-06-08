@@ -25,3 +25,28 @@ signed main()
 	return 0;
 }
 
+/*
+#include<bits/stdc++.h>
+using namespace std;
+#define int long long int
+const int N=1e5+6,mod=1e9+7;
+signed main()
+{
+	int n,m;cin>>n>>m;
+	vector<int>v(n),u(m),res(m);
+	for(int &i:v)cin>>i;
+	for(int &i:u)cin>>i;
+	int i=0;
+	for(int j=0;j<m;++j){
+	    while(i<n and v[i]<u[j]) i++;
+	    res[j]=i;
+	}
+	for(auto i:res){
+	    cout<<i<<" ";
+	}
+	cout<<"\n";
+	return 0;
+}
+
+
+*/
