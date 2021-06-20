@@ -4,8 +4,8 @@ using namespace std;
 #define int long long int
 
 void Malena(){
-	double x1,x2,x3,y1,y2,y3;cin>>x1>>y1>>x2>>y2>>x3>>y3;
-	double ok=(y2-y1)*(x3-x2)-(y3-y2)*(x2-x1);
+	int x1,x2,x3,y1,y2,y3;cin>>x1>>y1>>x2>>y2>>x3>>y3;
+	int ok=(y2-y1)*(x3-x2)-(y3-y2)*(x2-x1);
 	if(ok==0)cout<<"TOUCH";
 	else if(ok<0)cout<<"LEFT";
 	else cout<<"RIGHT";
