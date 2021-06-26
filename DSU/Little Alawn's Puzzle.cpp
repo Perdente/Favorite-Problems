@@ -58,11 +58,11 @@ void Malena(){
   for(int i=0;i<n;++i){
   	union_set(v[i],u[i]);
   }
-  set<int>s;
+  int cnt=0;
   for(int i=1;i<=n;++i){
-  	s.insert(find_set(i));
+  	if(i==find_set(i))cnt++;
   }
-  int cnt=s.size(),ans=1;
+  int ans=1;
   for(int i=0;i<cnt;++i){
   	ans=(ans*2)%mod;
   }
