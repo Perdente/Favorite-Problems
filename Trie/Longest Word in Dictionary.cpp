@@ -1,18 +1,19 @@
 //https://leetcode.com/problems/longest-word-in-dictionary/
 class Solution {
-    void dfs(int node,string so_far,string &answer,const vector<vector<int>>& nxt,const vector<bool>& is_terminal){
+    void dfs(int node,string& so_far,string &answer,const vector<vector<int>>& nxt,const vector<bool>& is_terminal){
         
-        if(so_far.length()>answer.length()
-           or (so_far.length()==answer.length() and so_far<answer)){
-               answer=so_far;
-           }
-           
-        for(int c=0;c<26;++c){
-            int tmp=nxt[node][c];
-            if(tmp!=0 and is_terminal[tmp]){
-                dfs(tmp ,so_far+char('a'+c),answer,nxt,is_terminal);
-            }
-        }
+       if(so_far.length()>answer.length()){
+           answer=so_far;
+       }
+      
+      for(int c=0;c<26;++c){
+          int tmp=nxt[node][c];
+          if(tmp!=0 and is_terminal[tmp]){
+              so_far+=char('a'+c);
+              dfs(tmp ,so_far,answer,nxt,is_terminal);
+              so_far.pop_back();
+          }
+      }
     }
 public:
     string longestWord(vector<string>& words) {
@@ -31,8 +32,8 @@ public:
             }
             is_terminal[node]=true;
         }
-        string answer="";
-        dfs(0,"",answer,nxt,is_terminal);
+        string answer="",so_far="";
+        dfs(0,so_far,answer,nxt,is_terminal);
         return answer;
     }
     
