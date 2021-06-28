@@ -17,14 +17,14 @@ class Solution {
     }
 public:
     string longestWord(vector<string>& words) {
-        vector<bool>is_terminal(true);
-        vector<vector<int>>nxt(1,vector<int>(26));
+        vector<bool>is_terminal(1);//This eventuallly becomes the size of the trie
+        vector<vector<int>>nxt(1,vector<int>(26));//This eventuallly becomes the size of the trie * 26
         int n=0;
         for(string s:words){
             int node=0;
             for(char c:s){
                 if(nxt[node][c-'a']==0){
-                    nxt.push_back(vector<int>(26));
+                    nxt.push_back(vector<int>(26));//we are keep pushing new nodes but won't exceed the size of trie
                     is_terminal.push_back(false);
                     nxt[node][c-'a']=++n;
                 }
