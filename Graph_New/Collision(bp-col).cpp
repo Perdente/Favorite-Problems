@@ -26,11 +26,7 @@ void Malena(){
 		graph[x].push_back(y);
 		graph[y].push_back(x);
 	}
-	for(int i=1;i<=n;++i){
-		if(graph[i].size() and color[i]==-1){
-			dfs(i,0);
-		}
-	}
+	dfs(1,0);
 	while(m--){
 		int x,y;cin>>x>>y;
 		cout<<(color[x]==color[y]?"Town":"Road")<<'\n';
