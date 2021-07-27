@@ -13,21 +13,24 @@ void Malena(){
 	}
 	vector<int>dis(n+1);
 	vector<bool>vis(n+1);
-	queue<int>q;
-	q.push(1);
-	vis[1]=true;
-	dis[1]=0;
-	while(!q.empty()){
-		int u=q.front();
-		q.pop();
-		for(auto v:adj[u]){
-			if(!vis[v]){
-				vis[v]=true;
-				dis[v]=1+dis[u];
-				q.push(v);
+	auto bfs=[&](int s){
+		queue<int>q;
+		q.push(s);
+		vis[s]=true;
+		dis[s]=0;
+		while(!q.empty()){
+			int u=q.front();
+			q.pop();
+			for(auto v:adj[u]){
+				if(!vis[v]){
+					vis[v]=true;
+					dis[v]=1+dis[u];
+					q.push(v);
+				}
 			}
 		}
-	}
+	};
+	bfs(1);
 	cout<<dis[n]<<'\n';
 
 }
