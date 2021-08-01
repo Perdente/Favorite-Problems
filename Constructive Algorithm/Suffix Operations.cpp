@@ -1,5 +1,4 @@
 //https://codeforces.com/contest/1453/problem/B
-//check constructive algorithm.txt
 /*A winner is just a loser who tried one more time*/
 
 #include<bits/stdc++.h>
