@@ -1,4 +1,5 @@
 //https://atcoder.jp/contests/abc212/tasks/abc212_d
+// lazy updates in priority queue
 /*A winner is just a loser who tried one more time*/
 
 #include<bits/stdc++.h>
