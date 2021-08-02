@@ -95,12 +95,12 @@ void SectumSempra()
 		cin>>t;
 		if(t==1){
 			cin>>x;
-			pq.push(x-cnt);
+			pq.push(x-cnt);// as the prev count should not be reflected on new x
 		}else if(t==2){
 			cin>>x;
 			cnt+=x;
 		}else{
-			cout<<pq.top()+cnt<<endl;
+			cout<<pq.top()+cnt<<endl; // the newly added counts should be added to answer
 			pq.pop();
 		}
 	}
