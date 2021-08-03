@@ -1,5 +1,6 @@
-
+//https://leetcode.com/problems/kth-ancestor-of-a-tree-node/
 // Binary Lifting tutorial https://youtu.be/oib-XsjFa-M
+//not an accepted code
 class TreeAncestor {
     vector<vector<int>> up; // int up[N][20];
     vector<int> depth;
