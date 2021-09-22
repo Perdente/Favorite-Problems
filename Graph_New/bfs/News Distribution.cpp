@@ -1,3 +1,4 @@
+//https://codeforces.com/gym/317667/problem/C
 /*
 we need to count the number of elements of each connected component
 So, we traverse whole component via bfs and store each node 
